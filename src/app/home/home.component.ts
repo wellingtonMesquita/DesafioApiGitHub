@@ -16,8 +16,7 @@ export class HomeComponent implements OnInit {
 
   }
   onuser(data) {
-    this.dataService.getRepo(data.name).subscribe((data: any[]) => {
-      console.log(data);
+    this.dataService.getRepoByUser(data.name).subscribe((data: any[]) => {
       this.products = data;
     })
   }
