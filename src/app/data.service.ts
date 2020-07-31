@@ -18,10 +18,8 @@ export class DataService {
   handleError(error: HttpErrorResponse) {
     let errorMessage = 'Unknown error!';
     if (error.error instanceof ErrorEvent) {
-      // Client-side errors
       errorMessage = `Error: ${error.error.message}`;
     } else {
-      // Server-side errors
       if(error.status == 404){
         errorMessage = 'Usuario não encontrado!'
       }
