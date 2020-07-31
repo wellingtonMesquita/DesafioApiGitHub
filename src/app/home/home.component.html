@@ -1,17 +1,17 @@
-<app-formulario (callParent)="onCallParent($event)"></app-formulario>
+<app-form (onuser)="onuser($event)"></app-form>
 
-<div fxLayout="row"  fxLayoutGap="100px" style="margin-left: 20px;">
-    <mat-accordion fxFlex.xs="70"  >
+<div fxLayout="row" fxLayoutGap="100px" style="margin-left: 20px;">
+    <mat-accordion fxFlex.xs="70">
         <mat-expansion-panel hideToggle *ngFor="let item of products">
             <mat-expansion-panel-header>
                 <mat-panel-title>
                     {{item.name}}
                 </mat-panel-title>
             </mat-expansion-panel-header>
-            <mat-list role="list" >
-                <mat-list-item  *ngIf="item.private" role="listitem"><strong>Privado?: Sim</strong></mat-list-item>
+            <mat-list role="list">
+                <mat-list-item *ngIf="item.private" role="listitem"><strong>Privado?:</strong> Sim</mat-list-item>
                 <mat-divider></mat-divider>
-                <mat-list-item *ngIf="!item.private" role="listitem"><strong>Privado?: Não</strong></mat-list-item>
+                <mat-list-item *ngIf="!item.private" role="listitem"><strong>Privado?:</strong> Não</mat-list-item>
                 <mat-divider></mat-divider>
                 <mat-list-item role="listitem"><strong>Tipo Usuario: </strong>{{item.owner.type}}</mat-list-item>
                 <mat-divider></mat-divider>
