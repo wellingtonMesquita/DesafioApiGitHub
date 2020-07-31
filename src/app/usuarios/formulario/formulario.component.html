@@ -1,0 +1,11 @@
+<div fxLayout="row" fxLayoutWrap fxLayoutGap="100px" style="margin-left: 20px;margin-top: 20px;">
+    <form [formGroup]="formUsuario" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <mat-form-field class="example-full-width">
+                <mat-label for="name">Usuario Git</mat-label>
+                <input matInput placeholder="Ex. Pizza" type="text" class="form-control" name="name" id="name" formControlName="name" required>
+            </mat-form-field>
+            <button type="submit" mat-button color="primary">Buscar</button>
+        </div>
+    </form>
+</div>

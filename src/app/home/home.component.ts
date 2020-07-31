@@ -13,7 +13,10 @@ export class HomeComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.sendGetRequest().subscribe((data: any[])=>{
+    
+  }
+  onCallParent(data){
+    this.dataService.sendGetRequest(data.name).subscribe((data: any[])=>{
       console.log(data);
       this.products = data;
     })  
