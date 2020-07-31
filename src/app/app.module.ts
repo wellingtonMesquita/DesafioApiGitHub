@@ -15,6 +15,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormularioComponent } from './usuarios/formulario/formulario.component';
+import {MatListModule} from '@angular/material/list';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { FormularioComponent } from './usuarios/formulario/formulario.component'
     MatCardModule,
     MatExpansionModule,
     MatInputModule,
+    MatListModule,
+    MatDividerModule,
     ReactiveFormsModule,
     FlexLayoutModule,
 
