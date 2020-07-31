@@ -1,9 +1,9 @@
 # DesafioApiGitHub
 Consulta um usuario do github e lista seus repositorios.
 # Requerimentos
-node v13.5.0
-Angular CLI: 9.0.7
-npm v6.13.4
+<p>node v13.5.0</p>
+<p>Angular CLI: 9.0.7</p>
+<p>npm v6.13.4</p>
 # Instalação
 git clone https://github.com/wellingtonMesquita/DesafioApiGitHub.git.
 cd DesafioApiGitHub.
