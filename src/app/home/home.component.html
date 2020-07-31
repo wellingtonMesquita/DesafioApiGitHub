@@ -1,7 +1,7 @@
-<app-formulario (callParent)="onCallParent($event)"></app-formulario>
+<app-form (onuser)="onuser($event)"></app-form>
 
-<div fxLayout="row" fxLayoutWrap fxLayoutGap="100px" style="margin-left: 20px;">
-    <mat-accordion>
+<div fxLayout="row" fxLayoutGap="100px" style="margin-left: 20px;">
+    <mat-accordion fxFlex.xs="70">
         <mat-expansion-panel hideToggle *ngFor="let item of products">
             <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -9,15 +9,11 @@
                 </mat-panel-title>
             </mat-expansion-panel-header>
             <mat-list role="list">
-                <mat-list-item *ngIf="item.private" role="listitem"><strong>Privado?: Sim</strong></mat-list-item>
+                <mat-list-item *ngIf="item.private" role="listitem"><strong>Privado?:</strong> Sim</mat-list-item>
                 <mat-divider></mat-divider>
-                <mat-list-item *ngIf="!item.private" role="listitem"><strong>Privado?: Não</strong></mat-list-item>
-                <mat-divider></mat-divider>
-                <mat-list-item role="listitem"><strong>Url Usuario: </strong> {{item.owner.html_url}}</mat-list-item>
+                <mat-list-item *ngIf="!item.private" role="listitem"><strong>Privado?:</strong> Não</mat-list-item>
                 <mat-divider></mat-divider>
                 <mat-list-item role="listitem"><strong>Tipo Usuario: </strong>{{item.owner.type}}</mat-list-item>
-                <mat-divider></mat-divider>
-                <mat-list-item role="listitem"><strong>Url do Repositorio: </strong> {{item.html_url}}</mat-list-item>
                 <mat-divider></mat-divider>
                 <mat-list-item role="listitem"><strong>Data de Criação: </strong>
                     {{item.created_at | date: 'dd/MM/yyyy H:MM'}}</mat-list-item>
@@ -26,7 +22,7 @@
                     {{item.updated_at | date: 'dd/MM/yyyy H:MM'}}
                 </mat-list-item>
                 <mat-divider></mat-divider>
-                <mat-list-item role="listitem"><strong>Tamanho do Repositorio: </strong> {{item.size}}</mat-list-item>
+                <mat-list-item role="listitem"><strong>Tamanho do Repositorio: </strong> {{item.size}}kB</mat-list-item>
                 <mat-divider></mat-divider>
                 <mat-list-item role="listitem"><strong>Linguagem Predominante: </strong> {{item.language}}
                 </mat-list-item>
@@ -35,6 +31,8 @@
                 </mat-list-item>
                 <mat-divider></mat-divider>
                 <mat-list-item role="listitem"><strong>Quantidade de Forks: </strong> {{item.forks_count}}
+                </mat-list-item>
+                <mat-list-item role="listitem"><strong>Quantidade de Visualizações: </strong> {{item.forks_count}}
                 </mat-list-item>
                 <mat-divider></mat-divider>
                 <mat-list-item role="listitem"><strong>Licensa: </strong> {{item.license}}</mat-list-item>

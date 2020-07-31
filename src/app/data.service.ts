@@ -22,13 +22,16 @@ export class DataService {
       errorMessage = `Error: ${error.error.message}`;
     } else {
       // Server-side errors
-      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+      if(error.status == 404){
+        errorMessage = 'Usuario não encontrado!'
+      }
+       
     }
     window.alert(errorMessage);
     return throwError(errorMessage);
   }
 
-  public sendGetRequest(user){
+  public getRepoByUser(user){
     return this.httpClient.get(this.REST_API_SERVER +'users/' + user + '/repos').pipe(retry(3), catchError(this.handleError));
   }
 }

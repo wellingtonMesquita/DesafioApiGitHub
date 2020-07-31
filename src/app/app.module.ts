@@ -14,15 +14,17 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormularioComponent } from './usuarios/formulario/formulario.component';
+import { FormsModule}from '@angular/forms';
 import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
+import { FormUserComponent } from './user/form-user/form-user.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FormularioComponent
+    FormUserComponent
   
 
   ],
@@ -40,6 +42,7 @@ import {MatDividerModule} from '@angular/material/divider';
     MatListModule,
     MatDividerModule,
     ReactiveFormsModule,
+    FormsModule,
     FlexLayoutModule,
 
   ],
