@@ -11,17 +11,14 @@ import { retry, catchError } from 'rxjs/operators';
 export class DataService {
 
   private REST_API_SERVER = "https://api.github.com/";
-  private user = 'wellingtonMesquita'
 
   constructor(private httpClient: HttpClient) { }
 
   handleError(error: HttpErrorResponse) {
     let errorMessage = 'Unknown error!';
     if (error.error instanceof ErrorEvent) {
-      // Client-side errors
       errorMessage = `Error: ${error.error.message}`;
     } else {
-      // Server-side errors
       if(error.status == 404){
         errorMessage = 'Usuario não encontrado!'
       }
