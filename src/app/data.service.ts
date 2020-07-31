@@ -11,7 +11,6 @@ import { retry, catchError } from 'rxjs/operators';
 export class DataService {
 
   private REST_API_SERVER = "https://api.github.com/";
-  private user = 'wellingtonMesquita'
 
   constructor(private httpClient: HttpClient) { }
 
